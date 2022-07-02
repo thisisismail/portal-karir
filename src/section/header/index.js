@@ -33,7 +33,7 @@ export default function HeaderSection() {
             className=" bg-transparent shadow-transparent"
             onClick={riseMenu}
           >
-            <BiMenuAltRight className="text-black -m-4" size={56} />
+            <BiMenuAltRight className="text-black border-2" size={36} />
             {/* <div>&deg</div> */}
           </Button>
         </div>

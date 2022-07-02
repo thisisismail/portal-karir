@@ -26,7 +26,7 @@ export default function CardBanner() {
         <h1 className="text-right font-mono font-bold text-green-700 text-3xl md:text-5xl">
           Temukan dan kembagnkan potensi dirimu dan raih masa depan cemerlang
         </h1>
-        <h5 className="text-right font-thin font-mono text-grey-600 text-sm md:text-xl">
+        <h5 className="text-right font-normal font-mono text-grey-600 text-sm md:text-xl">
           Galau cari kerja? Mau mengembangkan diri tanpa pusing memikirkan
           biaya? Bekali dirimu dengan{" "}
           <span className="font-bold">Portal Karir</span> dan #RaihKarirSekarang
