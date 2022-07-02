@@ -30,25 +30,25 @@ export default function LangkahBanner() {
   const CardList = cards.map((item, index) => {
     return (
       <Card
-        className="w-24 h-24 md:w-52 md:h-52 border-0 border-red-200 mt-4"
+        className="w-24 h-24 md:w-52 md:h-52 border-0 border-red-200 mt-0 xl:mt-4"
         key={index}
       >
-          <Button className="w-full h-full flex flex-col flex-wrap justify-center items-center bg-indigo-900">
-            {/* <MdQuestionAnswer size={size} /> */}
-            {item.icon}
-            <h1 className="font-bold md:text-2xl text-xs text-center pt-2 border-0">
-              {item.bigfont}
-            </h1>
-            <h5 className="pt-1 text-center invisible md:text-xs md:visible">
-              {item.smallfont}
-            </h5>
-          </Button>
+        <Button className="w-full h-full flex flex-col flex-wrap justify-center items-center bg-indigo-900">
+          {/* <MdQuestionAnswer size={size} /> */}
+          {item.icon}
+          <h1 className="font-bold md:text-2xl text-xs text-center pt-2 border-0">
+            {item.bigfont}
+          </h1>
+          <h5 className="pt-1 text-center invisible md:text-xs md:visible">
+            {item.smallfont}
+          </h5>
+        </Button>
       </Card>
     );
   });
 
   return (
-    <div className="mt-12 flex flex-col-reverse lg:flex-row border-0">
+    <div className="mt-12 flex flex-col-reverse lg:flex-row border-0 px-4">
       <div
         style={{ maxWidth: 808 }}
         className="border-0 flex flex-row justify-center items-center gap-2 xl:gap-4 w-full border-0 border-red-200 mx-auto xl:justify-end xl:mx-0"

@@ -13,7 +13,9 @@ export default function LandingPage() {
         <StatistikBanner />
         <LangkahBanner />
         <KursusUnggulan />
-        <GridKursusUnggulan />
+        <div className="invisible xl:visible">
+          <GridKursusUnggulan />
+        </div>
       </div>
     </div>
   );
