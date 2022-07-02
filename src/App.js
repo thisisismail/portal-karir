@@ -5,7 +5,7 @@ import FooterSection from "./section/footer/index.js";
 
 function App() {
   return (
-    <div className="flex flex-col justify-center">
+    <div className="flex flex-col justify-center bg-grey-50">
       <HeaderSection />
       <BodySection />
       <FooterSection />

@@ -3,12 +3,20 @@ import { Card, CardBody, Typography } from "@material-tailwind/react";
 
 export default function StatistikBanner() {
   return (
-    <div className="border-2 mt-4 flex justify-center items-center">
-      <Card>
-        <CardBody>
-          <div>
-            <h1 className="font-bold">32k</h1>
-            <h5>Pengguna aktif</h5>
+    <div className="border-0 w-full mt-1 md:mt-12 flex flex-wrap justify-center items-center">
+      <Card className="border-0 w-80">
+        <CardBody className="flex gap-2">
+          <div className="border-0 w-24 flex flex-col justify-center items-center">
+            <h1 className="font-bold text-2xl">32k</h1>
+            <h5 className="text-center">Pengguna aktif</h5>
+          </div>
+          <div className="border-0 w-24 flex flex-col justify-center items-center">
+            <h1 className="font-bold text-2xl">27k</h1>
+            <h5 className="text-center">Pengguna lulus kerja</h5>
+          </div>
+          <div className="border-0 w-24 flex flex-col justify-center items-center">
+            <h1 className="font-bold text-2xl">13k</h1>
+            <h5 className="text-center">Jumlah kursus</h5>
           </div>
         </CardBody>
       </Card>
