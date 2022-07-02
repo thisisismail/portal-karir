@@ -27,7 +27,7 @@ export default function HeaderSection() {
       <div style={{ width: 1400 }} className="md:px-4">
         <div
           id="button-menu"
-          className="sticky top-0 flex justify-end items-center md:hidden h-16"
+          className="sticky z-50 top-0 flex justify-end items-center md:hidden h-16"
         >
           <Button
             className=" bg-transparent shadow-transparent"
