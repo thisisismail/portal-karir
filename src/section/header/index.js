@@ -14,9 +14,9 @@ export default function HeaderSection() {
     menu.classList.toggle("h-full");
     menu.classList.toggle("bg-grey-100");
     menu.classList.toggle("rounded-b-xl");
-    for (let i = 0; i < menu.children.length; i++) {
-      menu.children[i].classList.toggle("p-4");
-    }
+    // for (let i = 0; i < menu.children.length; i++) {
+    //   menu.children[i].classList.toggle("p-4");
+    // }
   };
 
   return (
@@ -33,7 +33,7 @@ export default function HeaderSection() {
             className=" bg-transparent shadow-transparent"
             onClick={riseMenu}
           >
-            <BiMenuAltRight className="text-black border-2" size={36} />
+            <BiMenuAltRight className="text-black -m-4" size={56} />
             {/* <div>&deg</div> */}
           </Button>
         </div>
