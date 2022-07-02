@@ -1,6 +1,5 @@
 import React from "react";
 import banner from "../../assets/img/banner-landing-page.jpg";
-import { Card, CardBody, Typography } from "@material-tailwind/react";
 
 export default function CardBanner() {
   return (

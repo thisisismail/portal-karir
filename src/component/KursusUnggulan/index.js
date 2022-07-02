@@ -16,7 +16,7 @@ export default function KursusUnggulan() {
           Ikuti kurus yang paling banyak diminati perusahaan saat ini
         </h5>
       </div>
-      <div className="border-0 w-full flex justify-end">
+      <div className="px-4 border-0 w-full flex justify-end md:justify-center xl:justify-end">
         <Button className="bg-indigo-900">Lihat selengkapnya</Button>
       </div>
     </div>
