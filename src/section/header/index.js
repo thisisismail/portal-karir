@@ -7,22 +7,22 @@ export default function HeaderSection() {
     var menu = document.getElementById("menu");
     var header = document.getElementById("header-container");
 
-    header.classList.toggle("h-16");
-    header.classList.toggle("shadow-md");
+    // header.classList.toggle("h-16");
+    // header.classList.toggle("shadow-md");
     menu.classList.toggle("hidden");
-    menu.classList.toggle("w-full");
-    menu.classList.toggle("h-full");
-    menu.classList.toggle("bg-grey-100");
-    menu.classList.toggle("rounded-b-xl");
-    // for (let i = 0; i < menu.children.length; i++) {
-    //   menu.children[i].classList.toggle("p-4");
-    // }
+    // menu.classList.toggle("w-full");
+    // menu.classList.toggle("h-full");
+    // menu.classList.toggle("bg-grey-100");
+    // menu.classList.toggle("rounded-b-xl");
+    for (let i = 0; i < menu.children.length; i++) {
+      menu.children[i].classList.toggle("p-4");
+    }
   };
 
   return (
     <div
       id="header-container"
-      className="sticky z-50 top-0 border-0 rounded-b-xl w-full h-16 flex justify-center items-center bg-white shadow-md"
+      className="sticky z-50 top-0 border-0 rounded-b-xl w-full flex justify-center items-center bg-white shadow-md"
     >
       <div style={{ width: 1400 }} className="md:px-4">
         <div
@@ -39,7 +39,7 @@ export default function HeaderSection() {
         </div>
         <div
           id="menu"
-          className="hidden border-0 md:flex w-full justify-between"
+          className="hidden absolute border-0 md:flex w-full justify-between"
         >
           <div className="border-0">Logo</div>
           <div className="border-0">Kursus</div>
