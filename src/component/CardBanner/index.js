@@ -9,15 +9,15 @@ export default function CardBanner() {
         style={{ maxWidth: 808 }}
         className="w-full h-full border-0 border-red-200"
       >
-        <Card className="border-0 w-full h-60 xl:h-full shadow-none">
-          <CardBody className="h-full bg-blue-0">
+        <div className="border-0 w-full h-60 xl:h-full shadow-none">
+          <div className="h-full bg-blue-0">
             <img
               src={banner}
               alt="banner"
               className="object-cover h-full w-full rounded-xl"
             ></img>
-          </CardBody>
-        </Card>
+          </div>
+        </div>
       </div>
       <div
         style={{ maxWidth: 574 }}
