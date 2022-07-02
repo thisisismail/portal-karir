@@ -1,5 +1,5 @@
 import React from "react";
-import banner from "../../assets/img/banner-landing-page.jpg";
+import banner from "../../assets/img/background-people.png";
 
 export default function CardBanner() {
   return (
@@ -9,11 +9,11 @@ export default function CardBanner() {
         className="w-full h-full border-0 border-red-200"
       >
         <div className="border-0 w-full h-60 xl:h-full shadow-none">
-          <div className="h-full bg-blue-0 ">
+          <div className="h-full w-full bg-blue-0 border-0 border-red-300 flex justify-center xl:justify-start">
             <img
               src={banner}
               alt="banner"
-              className="object-cover h-full w-full rounded-xl"
+              className="object-contain h-full rounded-xl border-0"
             ></img>
           </div>
         </div>
