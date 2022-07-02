@@ -13,7 +13,7 @@ export default function CardBanner() {
             <img
               src={banner}
               alt="banner"
-              className="object-cover h-full w-full rounded-xl"
+              className="object-cover h-full w-full rounded-xl animate-pulse"
             ></img>
           </div>
         </div>
