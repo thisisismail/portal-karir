@@ -9,11 +9,11 @@ export default function CardBanner() {
         className="w-full h-full border-0 border-red-200"
       >
         <div className="border-0 w-full h-60 xl:h-full shadow-none">
-          <div className="h-full bg-blue-0">
+          <div className="h-full bg-blue-0 ">
             <img
               src={banner}
               alt="banner"
-              className="object-cover h-full w-full rounded-xl animate-pulse"
+              className="object-cover h-full w-full rounded-xl"
             ></img>
           </div>
         </div>
