@@ -10,12 +10,12 @@ export default function CardBanner() {
         className="w-full h-full border-0 border-red-200"
       >
         <Card className="border-0 w-full h-60 xl:h-full shadow-none">
-          <CardBody className="h-full bg-blue-200">
-            {/* <img
+          <CardBody className="h-full bg-blue-0">
+            <img
               src={banner}
               alt="banner"
               className="object-cover h-full w-full rounded-xl"
-            ></img> */}
+            ></img>
           </CardBody>
         </Card>
       </div>

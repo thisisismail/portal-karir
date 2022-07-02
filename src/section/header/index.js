@@ -12,8 +12,8 @@ export default function HeaderSection() {
     menu.classList.toggle("hidden");
     // menu.classList.toggle("w-full");
     // menu.classList.toggle("h-full");
-    // menu.classList.toggle("bg-grey-100");
-    // menu.classList.toggle("rounded-b-xl");
+    menu.classList.toggle("bg-grey-100");
+    menu.classList.toggle("rounded-b-xl");
     for (let i = 0; i < menu.children.length; i++) {
       menu.children[i].classList.toggle("p-4");
     }
