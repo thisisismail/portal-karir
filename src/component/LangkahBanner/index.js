@@ -9,17 +9,21 @@ export default function LangkahBanner() {
 
   const cards = [
     {
-      icon: <MdQuestionAnswer className="text-4xl md:text-7xl" />,
+      icon: (
+        <MdQuestionAnswer className="text-4xl -mr-3 md:text-7xl xl:mr-0 " />
+      ),
       bigfont: "Tanya",
       smallfont: "di komunitas",
     },
     {
-      icon: <RiPencilRuler2Fill className="text-4xl md:text-7xl" />,
+      icon: (
+        <RiPencilRuler2Fill className="text-4xl -ml-2 md:text-7xl xl:ml-0" />
+      ),
       bigfont: "Upgrade",
       smallfont: "kemampuan gratis",
     },
     {
-      icon: <FaHandshake className="text-4xl md:text-7xl" />,
+      icon: <FaHandshake className="text-4xl md:text-7xl -mr-2 xl:mr-0" />,
       bigfont: "Lamar",
       smallfont: "untuk mulai berkarir",
     },
@@ -27,7 +31,7 @@ export default function LangkahBanner() {
 
   const CardList = cards.map((item, index) => {
     return (
-      <Card className="w-24 h-24 md:w-52 md:h-52 border-0 border-red-200">
+      <Card className="w-24 h-24 md:w-52 md:h-52 border-0 border-red-200 mt-4">
         <Button className="w-full h-full flex flex-col flex-wrap justify-center items-center bg-indigo-900">
           {/* <MdQuestionAnswer size={size} /> */}
           {item.icon}

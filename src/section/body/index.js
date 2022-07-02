@@ -8,7 +8,7 @@ export default function BodySection() {
 
   return (
     <div className="border-0 flex flex-1 justify-center overflow-y-auto">
-      <div style={{ width: 1400 }} className="border-0 px-4 md:pt-24 pt-10 ">
+      <div style={{ width: 1400 }} className="border-0 px-4 md:pt-24 pt-10 text-white">
         <LandingPage />
         <div>{dummy}</div>
       </div>
