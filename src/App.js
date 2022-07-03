@@ -25,7 +25,7 @@ function App() {
     <div className="flex flex-col justify-center bg-grey-50">
       <a
         href="/"
-        className="relative top-12 ml-4 w-min h-8 z-50 border-0 -mt-8 md:hidden"
+        className="relative sticky top-4 ml-4 w-min h-8 z-50 border-0 -mt-8 md:hidden border-0"
       >
         <LogoPortalKarir/>
       </a>
