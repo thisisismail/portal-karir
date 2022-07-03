@@ -1,6 +1,7 @@
 import React from "react";
 import { BiMenuAltRight } from "react-icons/bi";
 import { Button } from "@material-tailwind/react";
+import { Link } from "react-router-dom";
 import LogoPortalKarir from "../../component/LogoPortalKarir";
 
 export default function HeaderSection() {
@@ -9,6 +10,7 @@ export default function HeaderSection() {
     var header = document.getElementById("header-container");
 
     header.classList.toggle("shadow-md");
+
     menu.classList.toggle("hidden");
     menu.classList.toggle("bg-lime-400");
     menu.classList.toggle("rounded-b-xl");
@@ -33,7 +35,6 @@ export default function HeaderSection() {
             onClick={riseMenu}
           >
             <BiMenuAltRight className="text-black -m-4" size={56} />
-            {/* <div>&deg</div> */}
           </Button>
         </div>
         <div
@@ -41,24 +42,36 @@ export default function HeaderSection() {
           className="hidden absolute md:static border-0 md:flex w-full justify-between"
         >
           <div className="border-0 hidden md:block">
-            <a href="/">
+            <Link to="/" onClick={riseMenu}>
               <LogoPortalKarir />
-            </a>
+            </Link>
           </div>
           <div className="border-0">
-            <a href="/kursus" className="text-green-700">
+            <Link
+              to="/kursus"
+              onClick={riseMenu}
+              className="text-green-700"
+            >
               Kursus
-            </a>
+            </Link>
           </div>
           <div className="border-0">
-            <a href="/kursus" className="text-green-700">
+            <Link
+              to="/kursus"
+              onClick={riseMenu}
+              className="text-green-700"
+            >
               Search Bar
-            </a>
+            </Link>
           </div>
           <div className="border-0">
-            <a href="/kursus" className="text-green-700">
+            <Link
+              to="/kursus"
+              onClick={riseMenu}
+              className="text-green-700"
+            >
               Login
-            </a>
+            </Link>
           </div>
         </div>
       </div>
