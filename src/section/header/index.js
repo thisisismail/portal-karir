@@ -20,6 +20,21 @@ export default function HeaderSection() {
     }
   };
 
+  const hideMenu = () => {
+    var menu = document.getElementById("menu");
+    var header = document.getElementById("header-container");
+
+    header.classList.add("shadow-md");
+
+    menu.classList.add("hidden");
+    menu.classList.remove("bg-lime-400");
+    menu.classList.remove("rounded-b-xl");
+    menu.classList.remove("drop-shadow-md");
+    for (let i = 0; i < menu.children.length; i++) {
+      menu.children[i].classList.remove("p-4");
+    }
+  };
+
   return (
     <div
       id="header-container"
@@ -42,34 +57,22 @@ export default function HeaderSection() {
           className="hidden absolute md:static border-0 md:flex w-full justify-between"
         >
           <div className="border-0 hidden md:block">
-            <Link to="/" onClick={riseMenu}>
+            <Link to="/" onClick={hideMenu}>
               <LogoPortalKarir />
             </Link>
           </div>
           <div className="border-0">
-            <Link
-              to="/kursus"
-              onClick={riseMenu}
-              className="text-green-700"
-            >
+            <Link to="/kursus" onClick={hideMenu} className="text-green-700">
               Kursus
             </Link>
           </div>
           <div className="border-0">
-            <Link
-              to="/kursus"
-              onClick={riseMenu}
-              className="text-green-700"
-            >
+            <Link to="/kursus" onClick={hideMenu} className="text-green-700">
               Search Bar
             </Link>
           </div>
           <div className="border-0">
-            <Link
-              to="/kursus"
-              onClick={riseMenu}
-              className="text-green-700"
-            >
+            <Link to="/kursus" onClick={hideMenu} className="text-green-700">
               Login
             </Link>
           </div>
