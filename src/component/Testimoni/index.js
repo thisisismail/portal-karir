@@ -15,7 +15,7 @@ export default function Testimoni() {
           className="h-20 w-20 object-fill rounded-full"
         ></img>
         <div style={{ maxWidth: 500 }} className="border-0">
-          <h5 className="border-0 text-justify font-normal font-mono text-grey-600 text-xs md:text-xl w-52 md:w-full">
+          <h5 className="border-0 font-normal font-mono text-grey-600 text-xs md:text-xl w-52 md:w-full">
             Saya merasa terbantu dengan adanya website{" "}
             <span className="font-bold">Portal Karir</span>, dengan adanya
             website ini Saya dapat mepersiapkan dunia kerja lebih baik lagi

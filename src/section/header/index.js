@@ -8,12 +8,9 @@ export default function HeaderSection() {
     var menu = document.getElementById("menu");
     var header = document.getElementById("header-container");
 
-    // header.classList.toggle("h-16");
     header.classList.toggle("shadow-md");
     menu.classList.toggle("hidden");
-    // menu.classList.toggle("w-full");
-    // menu.classList.toggle("h-full");
-    menu.classList.toggle("bg-grey-100");
+    menu.classList.toggle("bg-lime-400");
     menu.classList.toggle("rounded-b-xl");
     menu.classList.toggle("drop-shadow-md");
     for (let i = 0; i < menu.children.length; i++) {
