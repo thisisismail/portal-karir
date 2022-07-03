@@ -21,7 +21,7 @@ export default function HeaderSection() {
   return (
     <div
       id="header-container"
-      className="sticky z-50 top-0 h-16 border-0 rounded-b-xl w-full flex justify-center items-center bg-white shadow-md"
+      className="sticky z-40 top-0 h-16 border-0 rounded-b-xl w-full flex justify-center items-center bg-white shadow-md"
     >
       <div style={{ width: 1400 }} className="md:px-4">
         <div
@@ -40,12 +40,26 @@ export default function HeaderSection() {
           id="menu"
           className="hidden absolute md:static border-0 md:flex w-full justify-between"
         >
-          <div className="border-0">
-            <LogoPortalKarir />
+          <div className="border-0 hidden md:block">
+            <a href="/">
+              <LogoPortalKarir />
+            </a>
           </div>
-          <div className="border-0">Kursus</div>
-          <div className="border-0">SearchBar</div>
-          <div className="border-0">Login</div>
+          <div className="border-0">
+            <a href="/kursus" className="text-green-700">
+              Kursus
+            </a>
+          </div>
+          <div className="border-0">
+            <a href="/kursus" className="text-green-700">
+              Search Bar
+            </a>
+          </div>
+          <div className="border-0">
+            <a href="/kursus" className="text-green-700">
+              Login
+            </a>
+          </div>
         </div>
       </div>
     </div>
