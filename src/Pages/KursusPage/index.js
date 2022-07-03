@@ -9,7 +9,7 @@ export default function KursusPage() {
       <div className="w-full border-0 justify-center">
         <SearchBar />
       </div>
-      <div>
+      <div style={{ maxWidth: 500 }} className="mx-auto">
         <img src={gambar} alt="background-search" />
       </div>
     </div>
