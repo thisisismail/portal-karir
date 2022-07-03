@@ -1,6 +1,7 @@
 import React from "react";
 import { BiMenuAltRight } from "react-icons/bi";
 import { Button } from "@material-tailwind/react";
+import LogoPortalKarir from "../../component/LogoPortalKarir";
 
 export default function HeaderSection() {
   const riseMenu = () => {
@@ -42,7 +43,9 @@ export default function HeaderSection() {
           id="menu"
           className="hidden absolute md:static border-0 md:flex w-full justify-between"
         >
-          <div className="border-0">Logo</div>
+          <div className="border-0">
+            <LogoPortalKarir />
+          </div>
           <div className="border-0">Kursus</div>
           <div className="border-0">SearchBar</div>
           <div className="border-0">Login</div>
