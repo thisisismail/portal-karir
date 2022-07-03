@@ -3,7 +3,7 @@ import { Card, CardBody } from "@material-tailwind/react";
 
 export default function StatistikBanner() {
   return (
-    <div className="border-0 w-full mt-1 md:mt-12 flex flex-wrap justify-center items-center">
+    <div className="border-0 w-full mt-1 md:mt-8 flex flex-wrap justify-center items-center">
       <Card className="border-0 w-80">
         <CardBody className="flex gap-2">
           <div className="border-0 w-24 flex flex-col justify-center items-center">

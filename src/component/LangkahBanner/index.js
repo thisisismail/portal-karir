@@ -41,7 +41,7 @@ export default function LangkahBanner() {
           <h1 className="font-bold md:text-2xl text-xs text-center pt-2 border-0 border-red-200 absolute w-full md:static bottom-5">
             {item.bigfont}
           </h1>
-          <h5 className="pt-1 text-center invisible md:text-xs md:visible">
+          <h5 className="pt-1 text-center hidden md:text-xs md:block">
             {item.smallfont}
           </h5>
         </Button>
@@ -50,7 +50,7 @@ export default function LangkahBanner() {
   });
 
   return (
-    <div className="mt-12 flex flex-col-reverse lg:flex-row border-0 px-4 items-center">
+    <div className="mt-12 md:mt-24 flex flex-col-reverse lg:flex-row border-0 px-4 items-center">
       <div
         style={{ maxWidth: 808 }}
         className="border-0 flex flex-row justify-center items-center gap-2 xl:gap-4 w-full border-0 border-red-200 mx-auto xl:justify-end xl:mx-0"

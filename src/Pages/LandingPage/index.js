@@ -4,6 +4,7 @@ import StatistikBanner from "../../component/StatistikBanner/index";
 import LangkahBanner from "../../component/LangkahBanner/index";
 import KursusUnggulan from "../../component/KursusUnggulan/index";
 import GridKursusUnggulan from "../../component/GridKursusUnggulan/index";
+import Testimoni from "../../component/Testimoni/index";
 
 export default function LandingPage() {
   return (
@@ -13,7 +14,7 @@ export default function LandingPage() {
         <StatistikBanner />
         <LangkahBanner />
         <KursusUnggulan />
-        <div className="invisible xl:visible">
+        <div className="hidden xl:block">
           <GridKursusUnggulan />
         </div>
       </div>
