@@ -4,7 +4,7 @@ import LogoPortalKarir from "../../component/LogoPortalKarir/index.js";
 
 export default function FooterSection() {
   return (
-    <div>
+    <div className="border-0 border-red-200">
       <Testimoni />
       <div className="p-8 flex justify-between items-start bg-lime-400">
         <div className="w-40 md:w-96 border-0">
