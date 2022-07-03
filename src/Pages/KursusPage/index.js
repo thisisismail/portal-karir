@@ -1,13 +1,17 @@
 import React from "react";
-import { FetchSearch } from "../../apiCall/index";
 import { Button } from "@material-tailwind/react";
+import gambar from "../../assets/img/background-search.png";
+import SearchBar from "../../component/SearchBar/index.js";
 
 export default function KursusPage() {
-  const search = "Jokowi";
   return (
-    <div className="h-full">
-      KursusPage<div>Search Bar</div>
-      <Button onClick={() => FetchSearch(search)}>Cari</Button>
+    <div className="border-0 px-4">
+      <div className="w-full border-0 justify-center">
+        <SearchBar />
+      </div>
+      <div>
+        <img src={gambar} alt="background-search" />
+      </div>
     </div>
   );
 }
