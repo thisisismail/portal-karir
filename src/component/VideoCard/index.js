@@ -20,24 +20,29 @@ export default function VideoCard(props) {
   };
 
   return (
-    <div className="border-0 flex flex-col sm:flex-row w-full mb-4 sm:mb-6">
-      {/* <div id="videoPlayer" className="border-2 hidden absolute w-full left-0 flex justify-center">
+    <div
+      style={{ maxWidth: 600 }}
+      className="mx-auto border-0 flex flex-col sm:flex-row w-full mb-4 sm:mb-6"
+    >
+      {/* <div id="videoPlayer" className="border-0 hidden absolute w-full left-0 flex justify-center">
         <VideoPlayerCard videoId={props.videoId} videoLink={videoLink} className="z-50"/>
       </div> */}
-      <div className="h-24 lg:h-52 mb-0 md:h-24">
-        <div className="border-0 border-green-200">
-          <button href={videoLink} onClick={openVideoPlayer}>
-            <img
-              src={videoImage}
-              alt="thumbnail"
-              className="w-44 h-24 lg:h-52 lg:w-96 object-cover rounded-tl-xl rounded-br-xl shadow-lg"
-            />
-          </button>
-        </div>
+      <div className="w-full sm:w-min sm:h-44 mb-0 border-0 border-green-200">
+        <button
+          href={videoLink}
+          onClick={openVideoPlayer}
+          className="border-0 border-red-400 w-full sm:h-full sm:w-80"
+        >
+          <img
+            src={videoImage}
+            alt="thumbnail"
+            className="w-full h-full object-cover rounded-tl-xl rounded-br-xl shadow-lg"
+          />
+        </button>
       </div>
-      <div className="flex flex-col ml-2">
+      <div className="flex flex-col ml-0 sm:ml-2">
         <a href={videoLink}>
-          <h1 className="text-xs sm:font-semibold">{videoTitle}</h1>
+          <h1 className="text-xs sm:font-semibold md:text-sm">{videoTitle}</h1>
         </a>
         <a href={videoLink}>
           <h1 className="text-xs sm:text-sm text-grey-600">{videoChannel}</h1>

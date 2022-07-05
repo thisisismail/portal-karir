@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Input, Button } from "@material-tailwind/react";
 import { searchResult } from "../../store/action/index.js";
 import { FetchSearch } from "../../apiCall/index";
+import { GoSearch } from "react-icons/go";
 
 export default function SearchBar() {
   const [input, setInput] = useState("");
@@ -55,9 +56,13 @@ export default function SearchBar() {
           name="search" //should be the same as input we want to assign
           onChange={inputHandler}
           value={input ?? ""} //it is a good practice to add double question mark to prevent the error
+          color="teal"
         />
-        <Button onClick={submitHandler} className="bg-indigo-900 text-white">
-          Cari
+        <Button
+          onClick={submitHandler}
+          className="bg-indigo-900 text-white w-8"
+        >
+          <GoSearch size={16} className="-mx-2" />
         </Button>
       </div>
     </div>

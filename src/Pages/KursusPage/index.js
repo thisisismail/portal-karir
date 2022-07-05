@@ -17,7 +17,7 @@ export default function KursusPage() {
       <VideoCard
         videoTitle={item.snippet.title}
         videoId={item.id.videoId}
-        videoImage={item.snippet.thumbnails.high.url}
+        videoImage={item.snippet.thumbnails.medium.url}
         videoChannel={item.snippet.channelTitle}
         videoDate={item.snippet.publishedAt.slice(0, 10)}
       />
@@ -25,12 +25,12 @@ export default function KursusPage() {
   ));
 
   return (
-    <div className="border-0 px-4">
+    <div className="border-0 px-4 md:-mt-14">
       <div className="w-full border-0 justify-center">
         <SearchBar />
       </div>
-      <div style={{maxWidth:1000}} className="mx-auto">
-        <div className="mt-12 border-0">{videoList}</div>
+      <div style={{ maxWidth: 1000 }} className="mx-auto">
+        <div className="mt-6 md:mt-12 border-0">{videoList}</div>
       </div>
       <div style={{ maxWidth: 500 }} className="mx-auto">
         <img src={gambar} alt="background-search" />
