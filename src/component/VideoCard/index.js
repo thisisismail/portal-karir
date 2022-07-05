@@ -36,11 +36,11 @@ export default function VideoCard(props) {
           <img
             src={videoImage}
             alt="thumbnail"
-            className="w-full h-full object-cover rounded-tl-xl rounded-br-xl shadow-lg"
+            className="w-full h-full object-cover rounded-xl shadow-lg"
           />
         </button>
       </div>
-      <div className="flex flex-col ml-0 sm:ml-2">
+      <div className="flex flex-col ml-0 sm:ml-4">
         <a href={videoLink}>
           <h1 className="text-xs sm:font-semibold md:text-sm">{videoTitle}</h1>
         </a>

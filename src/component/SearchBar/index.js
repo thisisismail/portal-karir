@@ -63,7 +63,7 @@ export default function SearchBar() {
             onClick={submitHandler}
             className="bg-indigo-900 text-white w-8 relative -top-10 outline-green-200 rounded-l-none"
           >
-            <GoSearch size={16} className="-mx-2" />
+            <GoSearch size={16} className="-mx-2 text-white" />
           </Button>
         </div>
       </div>

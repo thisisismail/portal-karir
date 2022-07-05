@@ -8,10 +8,6 @@ import VideoCard from "../../component/VideoCard/index.js";
 export default function KursusPage() {
   const searchResult = useSelector((state) => state.searchResultReducer);
 
-  // const resultsList = searchResult.map((item, index)=>(<div>
-  //   <h3>{item}</h3>
-  // </div>))
-
   const videoList = searchResult?.map((item, index) => (
     <div key={index}>
       <VideoCard
@@ -32,8 +28,12 @@ export default function KursusPage() {
       <div style={{ maxWidth: 1000 }} className="mx-auto">
         <div className="mt-6 md:mt-12 border-0">{videoList}</div>
       </div>
-      <div style={{ maxWidth: 500 }} className="mx-auto">
-        <img src={gambar} alt="background-search" />
+      <div id="banner-image" style={{ maxWidth: 500 }} className="mx-auto">
+        {searchResult.length > 0 ? (
+          <img src={gambar} alt="background-search" className="hidden" />
+        ) : (
+          <img src={gambar} alt="background-search" className="" />
+        )}
       </div>
     </div>
   );
