@@ -7,6 +7,7 @@ import VideoCard from "../../component/VideoCard/index.js";
 
 export default function KursusPage() {
   const searchResult = useSelector((state) => state.searchResultReducer);
+  const playedVideo = useSelector((state) => state.playVideoReducer);
 
   const videoList = searchResult?.map((item, index) => (
     <div key={index}>
@@ -22,6 +23,11 @@ export default function KursusPage() {
 
   return (
     <div className="border-0 px-4 md:-mt-14">
+      <iframe
+        title="notitle"
+        className="w-full aspect-video absolute"
+        src={playedVideo}
+      ></iframe>
       <div className="w-full border-0 justify-center">
         <SearchBar />
       </div>

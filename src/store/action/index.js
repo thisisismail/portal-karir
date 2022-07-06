@@ -4,3 +4,10 @@ export const searchResult = (result) => {
     payload: result,
   };
 };
+
+export const playedVideolink = (link) => {
+  return {
+    type: "PLAYEDVIDEO",
+    payload: link,
+  };
+};

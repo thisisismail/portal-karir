@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
 import VideoPlayerCard from "../VideoPlayerCard/index.js";
 import {
   Card,
@@ -6,8 +7,25 @@ import {
   PopoverContent,
   PopoverHandler,
 } from "@material-tailwind/react";
+import { playedVideolink } from "../../store/action/index.js";
 
 export default function VideoCard(props) {
+  const [link, setLink] = useState("");
+
+  const dispatch = useDispatch();
+  const playedVideo = useSelector((state) => state.playVideoReducer);
+
+  useEffect(() => {
+    dispatch(playedVideolink(link));
+    console.log("stored to redux");
+  }, [link]);
+
+  useEffect(() => {
+    console.log("Display link from redux");
+    console.log(playedVideo);
+    console.log("finish display link from redux");
+  }, [playedVideo]);
+
   const videoLink = `https://www.youtube.com/watch?v=${props.videoId}`;
   const videoLinkPoppup = `https://www.youtube.com/embed/${props.videoId}`;
   const videoTitle = props.videoTitle;
@@ -16,8 +34,10 @@ export default function VideoCard(props) {
   const videoDate = props.videoDate;
 
   const openVideoPlayer = () => {
-    var videoPlayer = document.getElementById("videoPlayer");
-    videoPlayer.classList.toggle("hidden");
+    setLink(videoLinkPoppup);
+    console.log("video clicked start");
+    console.log(videoLinkPoppup);
+    console.log("video clicked finish");
   };
 
   return (
@@ -25,12 +45,12 @@ export default function VideoCard(props) {
       style={{ maxWidth: 600 }}
       className="mx-auto border-0 flex flex-col sm:flex-row w-full mb-4 sm:mb-6"
     >
-      <iframe
+      {/* <iframe
         title={videoTitle}
         id="videoPlayer"
         className="w-full aspect-video hidden absolute"
         src={videoLinkPoppup}
-      ></iframe>
+      ></iframe> */}
       <div
         id="videoPlayer"
         className="border-0 hidden absolute w-full left-0 flex justify-center"

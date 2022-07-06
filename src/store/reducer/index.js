@@ -1,10 +1,10 @@
 import { combineReducers } from "redux";
 import searchResultReducer from "./searchResultReducer.js";
-import counterReducer from "./counterReducer.js";
+import playVideoReducer from "./playVideoReducer.js";
 
 const allReducers = combineReducers({
   searchResultReducer: searchResultReducer,
-  counterReducer: counterReducer,
+  playVideoReducer: playVideoReducer,
 });
 
 export default allReducers;
