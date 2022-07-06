@@ -9,6 +9,7 @@ import {
 
 export default function VideoCard(props) {
   const videoLink = `https://www.youtube.com/watch?v=${props.videoId}`;
+  const videoLinkPoppup = `https://www.youtube.com/embed/${props.videoId}`;
   const videoTitle = props.videoTitle;
   const videoImage = props.videoImage;
   const videoChannel = props.videoChannel;
@@ -24,12 +25,26 @@ export default function VideoCard(props) {
       style={{ maxWidth: 600 }}
       className="mx-auto border-0 flex flex-col sm:flex-row w-full mb-4 sm:mb-6"
     >
-      {/* <div id="videoPlayer" className="border-0 hidden absolute w-full left-0 flex justify-center">
-        <VideoPlayerCard videoId={props.videoId} videoLink={videoLink} className="z-50"/>
-      </div> */}
+      <iframe
+        title={videoTitle}
+        id="videoPlayer"
+        className="w-full aspect-video hidden absolute"
+        src={videoLinkPoppup}
+      ></iframe>
+      <div
+        id="videoPlayer"
+        className="border-0 hidden absolute w-full left-0 flex justify-center"
+      >
+        <VideoPlayerCard
+          videoId={props.videoId}
+          videoLink={videoLink}
+          className="z-50"
+        />
+      </div>
+
       <div className="w-full sm:w-min sm:h-44 mb-0 border-0 border-green-200">
         <button
-          href={videoLink}
+          // href={videoLink}
           onClick={openVideoPlayer}
           className="border-0 border-red-400 w-full sm:h-full sm:w-80"
         >
