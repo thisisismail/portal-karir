@@ -26,17 +26,17 @@ export default function VideoCard(props) {
     console.log("finish display link from redux");
   }, [playedVideo]);
 
-  const videoLink = `https://www.youtube.com/watch?v=${props.videoId}`;
-  const videoLinkPoppup = `https://www.youtube.com/embed/${props.videoId}`;
+  // use embed instead of watch?v=
+  const videoLink = `https://www.youtube.com/embed/${props.videoId}`;
   const videoTitle = props.videoTitle;
   const videoImage = props.videoImage;
   const videoChannel = props.videoChannel;
   const videoDate = props.videoDate;
 
   const openVideoPlayer = () => {
-    setLink(videoLinkPoppup);
+    setLink(videoLink);
     console.log("video clicked start");
-    console.log(videoLinkPoppup);
+    console.log(videoLink);
     console.log("video clicked finish");
   };
 
@@ -49,7 +49,7 @@ export default function VideoCard(props) {
         title={videoTitle}
         id="videoPlayer"
         className="w-full aspect-video hidden absolute"
-        src={videoLinkPoppup}
+        src={videoLink}
       ></iframe> */}
       <div
         id="videoPlayer"
