@@ -1,30 +1,17 @@
 import React, { useState, useEffect } from "react";
-import { useSelector, useDispatch } from "react-redux";
-import VideoPlayerCard from "../VideoPlayerCard/index.js";
-import {
-  Card,
-  Popover,
-  PopoverContent,
-  PopoverHandler,
-} from "@material-tailwind/react";
+import { useDispatch } from "react-redux";
 import { playedVideolink } from "../../store/action/index.js";
 
 export default function VideoCard(props) {
   const [link, setLink] = useState("");
+  const [click, setClick] = useState(false);
 
   const dispatch = useDispatch();
-  const playedVideo = useSelector((state) => state.playVideoReducer);
 
   useEffect(() => {
     dispatch(playedVideolink(link));
-    console.log("stored to redux");
-  }, [link]);
-
-  useEffect(() => {
-    console.log("Display link from redux");
-    console.log(playedVideo);
-    console.log("finish display link from redux");
-  }, [playedVideo]);
+    console.log("finish store video link to redux");
+  }, [click]);
 
   // use embed instead of watch?v=
   const videoLink = `https://www.youtube.com/embed/${props.videoId}`;
@@ -34,6 +21,7 @@ export default function VideoCard(props) {
   const videoDate = props.videoDate;
 
   const openVideoPlayer = () => {
+    setClick(!click);
     setLink(videoLink);
     console.log("video clicked start");
     console.log(videoLink);
@@ -45,17 +33,6 @@ export default function VideoCard(props) {
       style={{ maxWidth: 600 }}
       className="mx-auto border-0 flex flex-col sm:flex-row w-full mb-4 sm:mb-6"
     >
-      <div
-        id="videoPlayer"
-        className="border-0 hidden absolute w-full left-0 flex justify-center"
-      >
-        <VideoPlayerCard
-          videoId={props.videoId}
-          videoLink={videoLink}
-          className="z-50"
-        />
-      </div>
-
       <div className="w-full sm:w-min sm:h-44 mb-0 border-0 border-green-200">
         <button
           onClick={openVideoPlayer}

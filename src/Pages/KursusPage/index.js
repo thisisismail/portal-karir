@@ -1,40 +1,32 @@
-import React, { useState, useEffect } from "react";
-import { Button, Card } from "@material-tailwind/react";
-import { useSelector, useDispatch } from "react-redux";
+import React from "react";
+import { useSelector } from "react-redux";
 import gambar from "../../assets/img/background-search.png";
 import SearchBar from "../../component/SearchBar/index.js";
 import VideoCard from "../../component/VideoCard/index.js";
-import { playedVideolink } from "../../store/action/index.js";
+import VideoPlayerCard from "../../component/VideoPlayerCard";
 
 export default function KursusPage() {
-  const dispatch = useDispatch();
-
   const searchResult = useSelector((state) => state.searchResultReducer);
   const playedVideo = useSelector((state) => state.playVideoReducer);
 
-  // useEffect(() => {
-  //   var videoFrame = document.getElementById("PlayedVideoId");
-  //   videoFrame.classList.toggle("hidden");
-  // }, [playedVideo]);
-
   const renderFramePlayer = () => {
-    if (playedVideo !== "") {
-      return (
-        <div
-          id="played-video-id"
-          className="border-0 bg-grey-700 bg-opacity-80 backdrop-blur-sm h-full w-full px-0 fixed top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2"
-        >
-          <Card className="p-2 rounded-xl fixed top-1/2 -translate-y-1/2 mx-2">
-            <iframe
-              title="notitle"
-              className="w-full aspect-video absolute sticky z-50 top-0 mb-2 rounded-xl"
-              src={playedVideo}
-            ></iframe>
-            <Button onClick={() => dispatch(playedVideolink(""))}>X</Button>
-          </Card>
-        </div>
-      );
-    }
+    return (
+      <div>
+        {playedVideo !== "" ? <VideoPlayerCard source={playedVideo} /> : null}
+      </div>
+    );
+  };
+
+  const renderBackgroundImage = () => {
+    return (
+      <div>
+        {searchResult.length === 0 ? (
+          <div id="banner-image" style={{ maxWidth: 500 }} className="mx-auto">
+            <img src={gambar} alt="background-search" className="" />
+          </div>
+        ) : null}
+      </div>
+    );
   };
 
   const videoList = searchResult?.map((item, index) => (
@@ -58,13 +50,7 @@ export default function KursusPage() {
       <div style={{ maxWidth: 1000 }} className="mx-auto">
         <div className="mt-12 md:mt-24 border-0">{videoList}</div>
       </div>
-      <div id="banner-image" style={{ maxWidth: 500 }} className="mx-auto">
-        {searchResult.length > 0 ? (
-          <img src={gambar} alt="background-search" className="hidden" />
-        ) : (
-          <img src={gambar} alt="background-search" className="" />
-        )}
-      </div>
+      {renderBackgroundImage()}
     </div>
   );
 }
