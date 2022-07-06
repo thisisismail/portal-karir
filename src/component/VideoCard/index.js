@@ -45,12 +45,6 @@ export default function VideoCard(props) {
       style={{ maxWidth: 600 }}
       className="mx-auto border-0 flex flex-col sm:flex-row w-full mb-4 sm:mb-6"
     >
-      {/* <iframe
-        title={videoTitle}
-        id="videoPlayer"
-        className="w-full aspect-video hidden absolute"
-        src={videoLink}
-      ></iframe> */}
       <div
         id="videoPlayer"
         className="border-0 hidden absolute w-full left-0 flex justify-center"
@@ -64,7 +58,6 @@ export default function VideoCard(props) {
 
       <div className="w-full sm:w-min sm:h-44 mb-0 border-0 border-green-200">
         <button
-          // href={videoLink}
           onClick={openVideoPlayer}
           className="border-0 border-red-400 w-full sm:h-full sm:w-80"
         >
