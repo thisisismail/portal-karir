@@ -49,7 +49,7 @@ export default function SearchBar() {
   return (
     <div>
       <div style={{ maxWidth: 600 }} className="flex flex-row mx-auto -mb-10 md:-mb-16">
-        <div className="w-full border-0 flex flex-col items-end justify-center">
+        <div className="w-full border-2 flex flex-col items-end justify-center">
           <Input
             className="text-green-800 w-full outline outline-0 outline-green-200"
             label="Cari kursus"

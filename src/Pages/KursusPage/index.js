@@ -43,7 +43,7 @@ export default function KursusPage() {
 
   return (
     <div className="border-0 px-4 md:-mt-14 relative">
-      <div className="w-full bg-white border-0 border-red-200 justify-center fixed left-0 top-0 h-36 px-4 pt-24 z-1">
+      <div className="w-full bg-grey-50 border-0 border-red-200 justify-center fixed left-0 top-0 h-36 px-4 pt-24 z-1">
         <SearchBar />
       </div>
       {renderFramePlayer()}
