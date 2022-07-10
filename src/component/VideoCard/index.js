@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
-import { playedVideolink } from "../../store/action/index.js";
+import { playedVideolink } from "../../store/Redux/action/index.js";
 
 export default function VideoCard(props) {
   const [link, setLink] = useState("");

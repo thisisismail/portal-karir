@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
 import jwt_decode from "jwt-decode";
-import { useDispatch, useSelector } from "react-redux";
-import { userData } from "../../store/action/index.js";
-import { FaGoogle } from "react-icons/fa";
+import { useDispatch } from "react-redux";
+import { userData } from "../../store/Redux/action/index.js";
+import { getDatabase, ref, set } from "firebase/database";
+import { app } from "../../store/Firebase/index.js";
 
 export default function LoginButton() {
   const [user, setUser] = useState({});
 
-  const userDataRdx = useSelector((state) => state.userDataReducer);
   const dispatch = useDispatch();
 
   function handleCallbackResponse(response) {
@@ -18,14 +18,20 @@ export default function LoginButton() {
   }
 
   useEffect(() => {
+    // store user data to redux
     dispatch(userData(user));
-  }, [user]);
 
-  useEffect(() => {
-    console.log("userDataRdx START" + userDataRdx);
-    console.log(userDataRdx);
-    console.log("userDataRdx FINISH");
-  }, [userDataRdx]);
+    // store user data to firebase
+    if (user.name) {
+      // console.log(user.name);
+      const database = getDatabase(app);
+      set(ref(database, "users"), {
+        username: user.name,
+        email: user.email,
+      });
+    }
+    // console.log(user.email);
+  }, [user]);
 
   useEffect(() => {
     /* global google */

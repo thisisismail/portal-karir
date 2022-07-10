@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Input, Button } from "@material-tailwind/react";
-import { searchResult } from "../../store/action/index.js";
+import { searchResult } from "../../store/Redux/action/index.js";
 import { FetchSearch } from "../../apiCall/index";
 import { GoSearch } from "react-icons/go";
 

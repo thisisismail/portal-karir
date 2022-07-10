@@ -1,7 +1,7 @@
 import React from "react";
 import { Button, Card } from "@material-tailwind/react";
 import { useDispatch } from "react-redux";
-import { playedVideolink } from "../../store/action/index.js";
+import { playedVideolink } from "../../store/Redux/action/index.js";
 
 export default function VideoPlayer(props) {
   const dispatch = useDispatch();
