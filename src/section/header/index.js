@@ -1,10 +1,15 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import { BiMenuAltRight } from "react-icons/bi";
 import { Button } from "@material-tailwind/react";
 import { Link } from "react-router-dom";
 import LogoPortalKarir from "../../component/LogoPortalKarir";
+import LoginButton from "../../component/LoginButton/index.js";
+import UserInfoHeader from "../../component/UserInfoHeader/index.js";
 
 export default function HeaderSection() {
+  const userDataRdx = useSelector((state) => state.userDataReducer);
+
   const riseMenu = () => {
     var menu = document.getElementById("menu");
     var header = document.getElementById("header-container");
@@ -54,7 +59,7 @@ export default function HeaderSection() {
         </div>
         <div
           id="menu"
-          className="hidden absolute md:static border-0 md:flex w-full justify-between"
+          className="hidden absolute md:static border-0 md:flex w-full justify-between items-center"
         >
           <div className="border-0 hidden md:block">
             <Link to="/" onClick={hideMenu}>
@@ -72,9 +77,19 @@ export default function HeaderSection() {
             </Link>
           </div>
           <div className="border-0">
-            <Link to="/kursus" onClick={hideMenu} className="text-green-700">
-              Login
-            </Link>
+            {/* {<div>{userDataRdx.name}</div> ?? <LoginButton/>} */}
+            {/* I do not know why code above does not work haha ;-;, so I use the code below instead */}
+            {userDataRdx.name && (
+              <UserInfoHeader
+                source={userDataRdx.picture}
+                name={userDataRdx.name}
+              />
+            )}
+            {!userDataRdx.name && <LoginButton />}
+            {/* <UserInfoHeader source={userDataRdx}/> */}
+
+            {/* <Link to="/kursus" onClick={hideMenu} className="text-green-700">
+            </Link> */}
           </div>
         </div>
       </div>

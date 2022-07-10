@@ -5,6 +5,7 @@ import LangkahBanner from "../../component/LangkahBanner/index";
 import KursusUnggulan from "../../component/KursusUnggulan/index";
 import GridKursusUnggulan from "../../component/GridKursusUnggulan/index";
 import Testimoni from "../../component/Testimoni/index";
+import LoginButton from "../../component/LoginButton/index";
 
 export default function LandingPage() {
   return (

@@ -11,3 +11,10 @@ export const playedVideolink = (link) => {
     payload: link,
   };
 };
+
+export const userData = (data) => {
+  return {
+    type: "USERDATA",
+    payload: data,
+  };
+};
