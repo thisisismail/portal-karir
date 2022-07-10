@@ -17,6 +17,15 @@ export default function LoginButton() {
     setUser(userObject);
   }
 
+  function ascii_to_hexa(str) {
+    var arr1 = [];
+    for (var n = 0, l = str.length; n < l; n++) {
+      var hex = Number(str.charCodeAt(n)).toString(16);
+      arr1.push(hex);
+    }
+    return arr1.join("");
+  }
+
   useEffect(() => {
     // store user data to redux
     dispatch(userData(user));
@@ -24,8 +33,9 @@ export default function LoginButton() {
     // store user data to firebase
     if (user.name) {
       // console.log(user.name);
+      const userID = ascii_to_hexa(user.email);
       const database = getDatabase(app);
-      set(ref(database, "users"), {
+      set(ref(database, "users/" + userID), {
         username: user.name,
         email: user.email,
       });
