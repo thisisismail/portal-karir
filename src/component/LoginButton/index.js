@@ -30,8 +30,7 @@ export default function LoginButton() {
   useEffect(() => {
     /* global google */
     google.accounts.id.initialize({
-      client_id:
-        "256384375485-m4kkh9cnfqa9u2en1qe0a15jjum4tbji.apps.googleusercontent.com",
+      client_id: process.env.REACT_APP_GOOGLE_CLIENT_ID,
       callback: handleCallbackResponse,
     });
 
@@ -44,7 +43,7 @@ export default function LoginButton() {
   }, []);
 
   return (
-    <div className="w-full border-2 h-full border-red-200">
+    <div className="w-full border-0 h-full border-red-200">
       <div id="signalDiv"></div>
     </div>
   );
