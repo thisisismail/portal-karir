@@ -1,5 +1,6 @@
 import React from "react";
 import { Button } from "@material-tailwind/react";
+import { Link } from "react-router-dom";
 import GridKursusUnggulan from "../GridKursusUnggulan/index.js";
 
 export default function KursusUnggulan() {
@@ -21,7 +22,9 @@ export default function KursusUnggulan() {
           <GridKursusUnggulan />
         </div>
         <div className="px-4 border-0 w-full flex justify-end md:justify-center xl:justify-end">
-          <Button className="bg-indigo-900">Lihat selengkapnya</Button>
+          <Link to="/kursus" className="text-green-700">
+            <Button className="bg-indigo-900">Lihat selengkapnya</Button>
+          </Link>
         </div>
       </div>
       {/* <GridKursusUnggulan /> */}
