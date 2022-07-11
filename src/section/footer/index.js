@@ -1,11 +1,14 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import Testimoni from "../../component/Testimoni";
 import LogoPortalKarir from "../../component/LogoPortalKarir/index.js";
 
 export default function FooterSection() {
+  const userDataRdx = useSelector((state) => state.userDataReducer);
   return (
-    <div className="border-0 border-red-200">
-      <Testimoni />
+    <div className="border-0 border-red-200 mt-16 md:mt-32">
+      {!userDataRdx.name && <Testimoni />}
+      {userDataRdx.name && null}
       <div className="p-8 flex justify-between items-start bg-lime-400">
         <div className="w-40 md:w-96 border-0">
           <LogoPortalKarir />

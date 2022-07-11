@@ -85,11 +85,11 @@ export default function HeaderSection() {
                 name={userDataRdx.name}
               />
             )}
-            {!userDataRdx.name && <LoginButton />}
-            {/* <UserInfoHeader source={userDataRdx}/> */}
-
-            {/* <Link to="/kursus" onClick={hideMenu} className="text-green-700">
-            </Link> */}
+            {!userDataRdx.name && (
+              <div className="flex flex-row justify-center items-center gap-2 text-grey-700">
+                <LoginButton />
+              </div>
+            )}
           </div>
         </div>
       </div>

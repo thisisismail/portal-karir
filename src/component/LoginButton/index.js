@@ -10,21 +10,21 @@ export default function LoginButton() {
 
   const dispatch = useDispatch();
 
-  function handleCallbackResponse(response) {
+  const handleCallbackResponse = (response) => {
     console.log("Encoded JWT ID token: " + response.credential);
     var userObject = jwt_decode(response.credential);
     console.log(userObject);
     setUser(userObject);
-  }
+  };
 
-  function ascii_to_hexa(str) {
+  const ascii_to_hexa = (str) => {
     var arr1 = [];
     for (var n = 0, l = str.length; n < l; n++) {
       var hex = Number(str.charCodeAt(n)).toString(16);
       arr1.push(hex);
     }
     return arr1.join("");
-  }
+  };
 
   useEffect(() => {
     // store user data to redux
@@ -51,10 +51,11 @@ export default function LoginButton() {
     });
 
     google.accounts.id.renderButton(document.getElementById("signalDiv"), {
-      type: "icon",
+      // type: "icon",
       theme: "filled_blue",
       size: "large",
       shape: "circle",
+      width: "100",
     });
   }, []);
 
