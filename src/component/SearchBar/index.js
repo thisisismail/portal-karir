@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Input, Button } from "@material-tailwind/react";
 import { searchResult } from "../../store/Redux/action/index.js";
-import { FetchSearch } from "../../apiCall/index";
+import { FetchSearch } from "../../apiCall/index.ts";
 import { GoSearch } from "react-icons/go";
 
 export default function SearchBar() {
@@ -48,7 +48,10 @@ export default function SearchBar() {
 
   return (
     <div>
-      <div style={{ maxWidth: 600 }} className="flex flex-row mx-auto -mb-10 md:-mb-16">
+      <div
+        style={{ maxWidth: 600 }}
+        className="flex flex-row mx-auto -mb-10 md:-mb-16"
+      >
         <div className="w-full border-0 flex flex-col items-end justify-center">
           <Input
             className="text-green-800 w-full outline outline-0 outline-green-200"

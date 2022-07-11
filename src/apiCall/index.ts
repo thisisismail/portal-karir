@@ -1,4 +1,4 @@
-const FetchSearch = async (search) => {
+const FetchSearch = async (search: string) => {
   const SEARCH = search;
   const API_KEY = process.env.REACT_APP_YOUTUBE_API_KEY;
   return await fetch(
