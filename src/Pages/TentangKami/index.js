@@ -10,7 +10,11 @@ export default function TentangKami() {
           style={{ maxWidth: 500 }}
           className="border-0 border-red-200 w-full"
         >
-          <img src={banner} alt="tentang kami" className="objec-fit w-full" />
+          <img
+            src={banner}
+            alt="tentang kami"
+            className="objec-fit w-full rounded-xl"
+          />
         </div>
         <div className="border-0 h-min my-auto">
           <h5 className="text-left font-normal font-mono text-grey-600 text-sm md:text-xl">
