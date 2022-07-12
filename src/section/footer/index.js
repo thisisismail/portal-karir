@@ -1,5 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 import Testimoni from "../../component/Testimoni";
 import LogoPortalKarir from "../../component/LogoPortalKarir/index.js";
 
@@ -19,7 +20,7 @@ export default function FooterSection() {
           </div>
         </div>
         <div className="text-right flex flex-col gap-1 md:gap-auto text-green-700">
-          <div>Tentang Kami</div>
+          <Link to="/tentang-kami">Tentang Kami</Link>
           <div>Narahubung</div>
           <div>Info lainnya</div>
         </div>

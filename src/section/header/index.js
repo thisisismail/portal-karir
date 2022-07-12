@@ -72,8 +72,8 @@ export default function HeaderSection() {
             </Link>
           </div>
           <div className="border-0">
-            <Link to="/kursus" onClick={hideMenu} className="text-green-700">
-              Search Bar
+            <Link to="/artikel" onClick={hideMenu} className="text-green-700">
+              Artikel
             </Link>
           </div>
           <div className="border-0">

@@ -1,0 +1,23 @@
+body {
+  background-color: #ffff;
+  margin: 0;
+  padding: 0;
+}
+.pict img {
+  float: left;
+  margin: 50px 20px 30px 80px;
+}
+.main p {
+  width: 600px;
+  height: 500px;
+  float: left;
+  margin: 150px 30px 30px 30px;
+  font-size: 30px;
+  text-align: center;
+}
+.main .portal {
+  color: blue;
+}
+.main .karir {
+  color: green;
+}

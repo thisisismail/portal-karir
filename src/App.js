@@ -7,6 +7,8 @@ import FooterSection from "./section/footer/index.js";
 import LandingPage from "./Pages/LandingPage/index.js";
 import ProfilePage from "./Pages/ProfilePage/index.js";
 import KursusPage from "./Pages/KursusPage/index.js";
+import KursusArtikel from "./Pages/KursusArtikel/index.js";
+import TentangKami from "./Pages/TentangKami/index.js";
 
 function App() {
   return (
@@ -26,6 +28,14 @@ function App() {
         <Route
           path="/kursus"
           element={<BodySection pageComponent={<KursusPage />} />}
+        />
+        <Route
+          path="/artikel"
+          element={<BodySection pageComponent={<KursusArtikel />} />}
+        />
+        <Route
+          path="/tentang-kami"
+          element={<BodySection pageComponent={<TentangKami />} />}
         />
       </Routes>
       <FooterSection />

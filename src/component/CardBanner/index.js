@@ -23,12 +23,14 @@ export default function CardBanner() {
         className="w-full px-4 py-6 flex flex-col justify-between gap-3 "
       >
         <h1 className="text-right font-mono font-bold text-green-700 text-3xl md:text-5xl">
-          Temukan dan kembagnkan potensi dirimu dan raih masa depan cemerlang
+          Temukan dan kembangkan potensi dirimu dan raih masa depan cemerlang
         </h1>
         <h5 className="text-right font-normal font-mono text-grey-600 text-sm md:text-xl">
           Galau cari kerja? Mau mengembangkan diri tanpa pusing memikirkan
           biaya? Bekali dirimu dengan{" "}
-          <span className="font-bold">Portal Karir</span> dan #RaihKarirSekarang
+          <span className="text-indigo-900 font-bold">Portal</span>{" "}
+          <span className="text-green-600 font-bold">Karir</span> dan
+          #RaihKarirSekarang
         </h5>
       </div>
     </div>

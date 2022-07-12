@@ -19,7 +19,7 @@ export default function KursusPage() {
 
   const renderBackgroundImage = () => {
     return (
-      <div>
+      <div className="border-0 h-screen">
         {searchResult.length === 0 ? (
           <div id="banner-image" style={{ maxWidth: 500 }} className="mx-auto">
             <img src={gambar} alt="background-search" className="" />
