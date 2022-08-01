@@ -27,18 +27,21 @@ export default function LoginButton() {
   };
 
   useEffect(() => {
-    // store user data to redux
-    dispatch(userData(user));
-
     // store user data to firebase
     if (user.name) {
-      // console.log(user.name);
       const userID = ascii_to_hexa(user.email);
-      const database = getDatabase(app);
-      set(ref(database, "users/" + userID), {
+      const userObject = {
         username: user.name,
         email: user.email,
-      });
+        keyId: userID,
+        picture: user.picture,
+      };
+      console.log("yuhu");
+      // store user data to redux
+      dispatch(userData(userObject));
+
+      const database = getDatabase(app);
+      set(ref(database, "users/" + userID), userObject);
     }
     // console.log(user.email);
   }, [user]);

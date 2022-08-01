@@ -12,10 +12,10 @@ import TentangKami from "./Pages/TentangKami/index.js";
 
 function App() {
   return (
-    <div className="flex flex-col justify-center bg-grey-50">
+    <div className="flex flex-col justify-center bg-grey-50 border-0 min-h-screen">
       <Link
         to="/"
-        className="relative sticky top-4 ml-4 w-min h-8 z-50 -mt-8 md:hidden border-0"
+        className="sticky top-4 ml-4 w-min h-8 z-50 -mt-8 md:hidden border-0"
       >
         <LogoPortalKarir />
       </Link>

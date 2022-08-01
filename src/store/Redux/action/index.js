@@ -18,3 +18,10 @@ export const userData = (data) => {
     payload: data,
   };
 };
+
+export const articleData = (data) => {
+  return {
+    type: "ARTICLEDATA",
+    payload: data,
+  };
+};

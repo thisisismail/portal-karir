@@ -79,13 +79,13 @@ export default function HeaderSection() {
           <div className="border-0">
             {/* {<div>{userDataRdx.name}</div> ?? <LoginButton/>} */}
             {/* I do not know why code above does not work haha ;-;, so I use the code below instead */}
-            {userDataRdx.name && (
+            {userDataRdx.username && (
               <UserInfoHeader
                 source={userDataRdx.picture}
-                name={userDataRdx.name}
+                name={userDataRdx.username}
               />
             )}
-            {!userDataRdx.name && (
+            {!userDataRdx.username && (
               <div className="flex flex-row justify-center items-center gap-2 text-grey-700">
                 <LoginButton />
               </div>
