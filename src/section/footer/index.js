@@ -9,7 +9,7 @@ export default function FooterSection() {
   return (
     <div className="border-0 border-red-200 mt-16 md:mt-32">
       {!userDataRdx.name && <Testimoni />}
-      {userDataRdx.name && null}
+      {userDataRdx.name && <div className="h-80 md:h-96"></div>}
       <div className="p-8 flex justify-between items-start bg-lime-400">
         <div className="w-40 md:w-96 border-0">
           <LogoPortalKarir />
