@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import {
   Card,
@@ -52,10 +52,9 @@ export default function CreateArtikelCard(props) {
       author: userDataRdx.username,
       company: "Gojek",
       position: "Cybersecurity Specialist",
-      //// We use class instead of className because the string to html converter only can convert to html not jsx. We should use string in order to store the html tags to firebase
       content: {
         title: `${article.title}`,
-        body: `<h5>${article.body}</h5>`,
+        body: `<h5>${article.body.replace(/\n/g, "<br/>")}</h5>`,
       },
     }).then(() => callBackFunction());
   };

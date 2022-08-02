@@ -42,8 +42,8 @@ export default function KursusArtikel() {
   };
 
   return (
-    <div className="h-full flex flex-col gap-2">
-      <CreateArtikelCard callBackFunction={fetchFirebase} />
+    <div className="h-full flex flex-col gap-2 border-0 px-4 items-center">
+      {/* <CreateArtikelCard callBackFunction={fetchFirebase} /> */}
       <div id="mylist"></div>
       {data}
     </div>
