@@ -4,6 +4,7 @@ import {
   Card,
   CardBody,
   Input,
+  Textarea,
   CardFooter,
   Button,
   Alert,
@@ -54,7 +55,7 @@ export default function CreateArtikelCard(props) {
       //// We use class instead of className because the string to html converter only can convert to html not jsx. We should use string in order to store the html tags to firebase
       content: {
         title: `${article.title}`,
-        body: `<div><h1 class="font-bold text-green-200">${article.title}</h1><h5>${article.body}</h5></div>`,
+        body: `<h5>${article.body}</h5>`,
       },
     }).then(() => callBackFunction());
   };
@@ -78,7 +79,7 @@ export default function CreateArtikelCard(props) {
             value={article.title ?? ""}
             color="teal"
           />
-          <Input
+          <Textarea
             className="text-green-800 w-full outline outline-0 outline-green-200"
             label="Body"
             type="text"
