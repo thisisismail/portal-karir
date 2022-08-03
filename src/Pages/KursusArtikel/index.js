@@ -44,7 +44,7 @@ export default function KursusArtikel() {
 
   return (
     <div className="h-full flex flex-col gap-2 border-0 px-4 items-center">
-      <div className="mb-4">
+      <div className="mb-4 w-full">
         <CreateArtikelCard callBackFunction={fetchFirebase} />
       </div>
       {data ? data : <DataLoading />}

@@ -60,10 +60,10 @@ export default function CreateArtikelCard(props) {
   };
 
   return (
-    <div>
+    <>
       <Card
-        style={{ minWidth: 300, maxWidth: 800 }}
-        className="border-0 h-min mt-3 -mb-3"
+        style={{ maxWidth: 800 }}
+        className="border-0 h-min mt-3 -mb-3 mx-auto"
       >
         <CardBody className="flex flex-col gap-2">
           <h1 className="font-bold text-grey-700 mx-auto">Create Article</h1>
@@ -114,6 +114,6 @@ export default function CreateArtikelCard(props) {
           </Alert>
         </div>
       ) : null}
-    </div>
+    </>
   );
 }
