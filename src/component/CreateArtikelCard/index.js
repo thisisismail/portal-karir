@@ -54,7 +54,7 @@ export default function CreateArtikelCard(props) {
       position: "Cybersecurity Specialist",
       content: {
         title: `${article.title}`,
-        body: `<h5>${article.body.replace(/\n/g, "<br/>")}</h5>`,
+        body: `<h5 class="">${article.body.replace(/\n/g, "<br/>")}</h5>`,
       },
     }).then(() => callBackFunction());
   };

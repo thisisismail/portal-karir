@@ -5,6 +5,7 @@ import { articleData } from "../../store/Redux/action/index.js";
 import { app } from "../../store/Firebase/index.js";
 import CreateArtikelCard from "../../component/CreateArtikelCard/index";
 import CardArticles from "../../component/CardArticles/index";
+import DataLoading from "../../component/CardArticles/loading.js";
 
 export default function KursusArtikel() {
   const [data, setData] = useState();
@@ -43,9 +44,10 @@ export default function KursusArtikel() {
 
   return (
     <div className="h-full flex flex-col gap-2 border-0 px-4 items-center">
-      {/* <CreateArtikelCard callBackFunction={fetchFirebase} /> */}
-      <div id="mylist"></div>
-      {data}
+      <div className="mb-4">
+        <CreateArtikelCard callBackFunction={fetchFirebase} />
+      </div>
+      {data ? data : <DataLoading />}
     </div>
   );
 }
