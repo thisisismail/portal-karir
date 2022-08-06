@@ -4,7 +4,7 @@ import banner from "../../assets/img/TentangKami.jpg";
 
 export default function TentangKami() {
   return (
-    <div className="h-screen">
+    <div className="h-full">
       <div className="border-0 w-full flex flex-col md:flex-row px-4">
         <div
           style={{ maxWidth: 500 }}
