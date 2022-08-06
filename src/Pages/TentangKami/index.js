@@ -1,8 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import "./style/TentangKami.css";
 import banner from "../../assets/img/TentangKami.jpg";
 
 export default function TentangKami() {
+  const [loading, setLoading] = useState(
+    <div className="w-full aspect-square rounded-md bg-grey-200 animate-pulse"></div>
+  );
+  const [display, setDisplay] = useState("hidden");
+
+  const myClass = `objec-fit w-full rounded-md ${display}`;
+
   return (
     <div className="h-full">
       <div className="border-0 w-full flex flex-col md:flex-row px-4">
@@ -10,10 +17,16 @@ export default function TentangKami() {
           style={{ maxWidth: 500 }}
           className="border-0 border-red-200 w-full"
         >
+          {loading}
           <img
             src={banner}
             alt="tentang kami"
-            className="objec-fit w-full rounded-xl"
+            className={myClass}
+            onLoad={() => {
+              setLoading();
+              setDisplay("");
+              console.log("Background Loaded");
+            }}
           />
         </div>
         <div className="border-0 h-min my-auto">
