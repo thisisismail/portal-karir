@@ -15,7 +15,6 @@ export default function Testimoni() {
       Profile picture
     </div>
   );
-  const [alt, setAlt] = useState("");
   const [display, setDisplay] = useState("hidden");
 
   const dispatch = useDispatch();
@@ -80,11 +79,10 @@ export default function Testimoni() {
       <div className="pt-6 flex flex-row justify-center items-center gap-4 border-0 w-full">
         <img
           src={avatar}
-          alt={alt}
+          alt="Profile"
           className={myClass}
           onLoad={() => {
             setLoading();
-            setAlt("Profile picture");
             setDisplay("");
             console.log("Djoko image is fully loaded");
           }}
