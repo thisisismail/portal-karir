@@ -9,6 +9,7 @@ export default function KursusPage() {
   const [loading, setLoading] = useState(
     <div className="w-full aspect-square border-0 animate-pulse rounded-md bg-grey-200"></div>
   );
+  const [display, setDisplay] = useState("hidden");
 
   const searchResult = useSelector((state) => state.searchResultReducer);
   const playedVideo = useSelector((state) => state.playVideoReducer);
@@ -21,6 +22,8 @@ export default function KursusPage() {
     );
   };
 
+  const myClass = `${display}`;
+
   const renderBackgroundImage = () => {
     return (
       <div className="border-0 min-h-full">
@@ -32,8 +35,10 @@ export default function KursusPage() {
               alt="background-search"
               onLoad={() => {
                 setLoading();
+                setDisplay("");
                 console.log("Fully Loaded");
               }}
+              className={myClass}
             />
           </div>
         ) : null}
