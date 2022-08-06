@@ -5,6 +5,8 @@ import { userData } from "../../store/Redux/action/index.js";
 import { getDatabase, ref, set } from "firebase/database";
 import { app } from "../../store/Firebase/index.js";
 
+const google = window.google;
+
 export default function LoginButton() {
   const [user, setUser] = useState({});
 
