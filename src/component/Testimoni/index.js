@@ -10,7 +10,12 @@ import { app } from "../../store/Firebase/index.js";
 
 export default function Testimoni() {
   const [user, setUser] = useState({});
-  const [click, setClick] = useState(false);
+  const [loading, setLoading] = useState(
+    <div className="h-20 aspect-square rounded-full animate-pulse bg-grey-200 flex justify-center items-center text-center text-grey-600">
+      Profile picture
+    </div>
+  );
+  const [alt, setAlt] = useState("");
 
   const dispatch = useDispatch();
 
@@ -72,9 +77,15 @@ export default function Testimoni() {
       <div className="pt-6 flex flex-row justify-center items-center gap-4 border-0 w-full">
         <img
           src={avatar}
-          alt="profile"
+          alt={alt}
           className="h-20 w-20 object-fill rounded-full"
+          onLoad={() => {
+            setLoading();
+            setAlt("Profile picture");
+            console.log("Djoko image is fully loaded");
+          }}
         ></img>
+        {loading}
         <div style={{ maxWidth: 500 }} className="border-0">
           <h5 className="border-0 font-normal font-mono text-grey-600 text-xs md:text-xl w-52 md:w-full">
             Saya merasa terbantu dengan adanya website{" "}

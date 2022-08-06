@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import gambar from "../../assets/img/background-search.png";
 import SearchBar from "../../component/SearchBar/index.js";
@@ -6,6 +6,10 @@ import VideoCard from "../../component/VideoCard/index.js";
 import VideoPlayerCard from "../../component/VideoPlayerCard";
 
 export default function KursusPage() {
+  const [loading, setLoading] = useState(
+    <div className="w-full aspect-square border-0 animate-pulse rounded-md bg-grey-200"></div>
+  );
+
   const searchResult = useSelector((state) => state.searchResultReducer);
   const playedVideo = useSelector((state) => state.playVideoReducer);
 
@@ -22,7 +26,15 @@ export default function KursusPage() {
       <div className="border-0 min-h-full">
         {searchResult.length === 0 ? (
           <div id="banner-image" style={{ maxWidth: 500 }} className="mx-auto">
-            <img src={gambar} alt="background-search" className="" />
+            {loading}
+            <img
+              src={gambar}
+              alt="background-search"
+              onLoad={() => {
+                setLoading();
+                console.log("Fully Loaded");
+              }}
+            />
           </div>
         ) : null}
       </div>

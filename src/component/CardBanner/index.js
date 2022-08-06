@@ -1,7 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import banner from "../../assets/img/background-people.png";
 
 export default function CardBanner() {
+  const [loading, setLoading] = useState(
+    <div className="w-full h-full border-0 animate-pulse rounded-md bg-grey-200">
+      Banner
+    </div>
+  );
   return (
     <div className="border-0 flex flex-col xl:flex-row-reverse items-center justify-between xl:h-96">
       <div
@@ -10,10 +15,15 @@ export default function CardBanner() {
       >
         <div className="border-0 w-full h-60 xl:h-full shadow-none">
           <div className="h-full w-full bg-blue-0 border-0 border-red-300 flex justify-center xl:justify-start">
+            {loading}
             <img
               src={banner}
               alt="banner"
               className="object-contain h-full rounded-xl border-0"
+              onLoad={() => {
+                setLoading();
+                console.log("image loaded");
+              }}
             ></img>
           </div>
         </div>
