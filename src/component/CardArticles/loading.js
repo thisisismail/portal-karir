@@ -20,10 +20,10 @@ export default function loading() {
                 <div className="border-0 text-xs bg-grey-400 rounded-md h-3 w-1/5"></div>
               </div>
               <CardBody className="text-xs md:text-sm text-justify h-28">
-                <div className="flex flex-col gap-2 line-clamp-3 border-0">
-                  <div className="border-0 font-bold text-sm bg-grey-400 rounded-md w-full h-3"></div>
-                  <div className="border-0 font-bold text-sm bg-grey-400 rounded-md w-full h-3"></div>
-                  <div className="border-0 font-bold text-sm bg-grey-400 rounded-md w-full h-3"></div>
+                <div className="flex flex-col gap-1 line-clamp-3 border-0">
+                  <div className="border-0 font-bold text-sm bg-grey-400 rounded-md w-full h-4"></div>
+                  <div className="border-0 font-bold text-sm bg-grey-400 rounded-md w-full h-4"></div>
+                  <div className="border-0 font-bold text-sm bg-grey-400 rounded-md w-full h-4"></div>
                 </div>
               </CardBody>
             </Card>
