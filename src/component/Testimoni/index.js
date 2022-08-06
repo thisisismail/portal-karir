@@ -16,6 +16,7 @@ export default function Testimoni() {
     </div>
   );
   const [alt, setAlt] = useState("");
+  const [display, setDisplay] = useState("hidden");
 
   const dispatch = useDispatch();
 
@@ -69,6 +70,8 @@ export default function Testimoni() {
     });
   }, []);
 
+  const myClass = `h-20 w-20 object-fill rounded-full ${display}`;
+
   return (
     <div className="rounded-t-xl h-80 md:h-96 pt-8 md:pt-16  flex justify-start items-center flex-col bg-green-100">
       <h1 className="text-left font-mono font-bold text-green-700 text-3xl md:text-5xl">
@@ -78,10 +81,11 @@ export default function Testimoni() {
         <img
           src={avatar}
           alt={alt}
-          className="h-20 w-20 object-fill rounded-full"
+          className={myClass}
           onLoad={() => {
             setLoading();
             setAlt("Profile picture");
+            setDisplay("");
             console.log("Djoko image is fully loaded");
           }}
         ></img>

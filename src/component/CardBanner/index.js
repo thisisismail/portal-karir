@@ -3,7 +3,7 @@ import banner from "../../assets/img/background-people.png";
 
 export default function CardBanner() {
   const [loading, setLoading] = useState(
-    <div className="w-full h-full border-0 animate-pulse rounded-md bg-grey-200">
+    <div className="w-full h-full border-0 animate-pulse rounded-md bg-grey-200 flex justify-center items-center">
       Banner
     </div>
   );
