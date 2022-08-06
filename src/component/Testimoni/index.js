@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import avatar from "../../assets/img/profile-square.png";
-import { Button } from "@material-tailwind/react";
 ////////////////////////////////////////////////////////////////////////
 import jwt_decode from "jwt-decode";
 import { useDispatch } from "react-redux";
@@ -11,9 +10,7 @@ import { app } from "../../store/Firebase/index.js";
 export default function Testimoni() {
   const [user, setUser] = useState({});
   const [loading, setLoading] = useState(
-    <div className="h-20 aspect-square rounded-full animate-pulse bg-grey-200 flex justify-center items-center text-center text-grey-600">
-      Profile picture
-    </div>
+    <div className="h-20 aspect-square rounded-full animate-pulse bg-grey-200 flex justify-center items-center text-center text-grey-600"></div>
   );
   const [display, setDisplay] = useState("hidden");
 

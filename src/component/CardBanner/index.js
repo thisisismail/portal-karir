@@ -3,10 +3,12 @@ import banner from "../../assets/img/background-people.png";
 
 export default function CardBanner() {
   const [loading, setLoading] = useState(
-    <div className="w-full h-full border-0 animate-pulse rounded-md bg-grey-200 flex justify-center items-center">
-      Banner
-    </div>
+    <div className="w-full h-full border-0 animate-pulse rounded-md bg-grey-200 flex justify-center items-center"></div>
   );
+  const [display, setDisplay] = useState("hidden");
+
+  const myClass = `object-contain h-full rounded-xl border-0 ${display}`;
+
   return (
     <div className="border-0 flex flex-col xl:flex-row-reverse items-center justify-between xl:h-96">
       <div
@@ -19,9 +21,10 @@ export default function CardBanner() {
             <img
               src={banner}
               alt="banner"
-              className="object-contain h-full rounded-xl border-0"
+              className={myClass}
               onLoad={() => {
                 setLoading();
+                setDisplay("");
                 console.log("image loaded");
               }}
             ></img>
