@@ -16,7 +16,7 @@ export default function VideoPlayer(props) {
       >
         <iframe
           title="notitle"
-          className="w-full aspect-video absolute sticky z-50 top-0 mb-2 rounded-xl"
+          className="w-full aspect-video sticky z-50 top-0 mb-2 rounded-xl"
           src={props.source}
         ></iframe>
         <Button onClick={() => dispatch(playedVideolink(""))}>X</Button>
