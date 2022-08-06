@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { getDatabase, ref, get, child } from "firebase/database";
 import { useDispatch } from "react-redux";
+import { getDatabase, ref, get, child } from "firebase/database";
 import { articleData } from "../../store/Redux/action/index.js";
 import { app } from "../../store/Firebase/index.js";
 import CreateArtikelCard from "../../component/CreateArtikelCard/index";
@@ -9,6 +9,7 @@ import DataLoading from "../../component/CardArticles/loading.js";
 
 export default function KursusArtikel() {
   const [data, setData] = useState();
+
   const dispatch = useDispatch();
 
   useEffect(() => {
