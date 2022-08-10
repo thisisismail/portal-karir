@@ -5,7 +5,6 @@ import HeaderSection from "./section/header/index.js";
 import BodySection from "./section/body/index.js";
 import FooterSection from "./section/footer/index.js";
 import LandingPage from "./Pages/LandingPage/index.js";
-import ProfilePage from "./Pages/ProfilePage/index.js";
 import KursusPage from "./Pages/KursusPage/index.js";
 import KursusArtikel from "./Pages/KursusArtikel/index.js";
 import TentangKami from "./Pages/TentangKami/index.js";

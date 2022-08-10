@@ -5,8 +5,6 @@ import { userData } from "../../store/Redux/action/index.js";
 import { getDatabase, ref, set } from "firebase/database";
 import { app } from "../../store/Firebase/index.js";
 
-const google = window.google;
-
 export default function LoginButton() {
   const [user, setUser] = useState({});
 
@@ -29,24 +27,24 @@ export default function LoginButton() {
   };
 
   useEffect(() => {
-    // store user data to firebase
     if (user.name) {
       const userID = ascii_to_hexa(user.email);
+      const database = getDatabase(app);
       const userObject = {
         username: user.name,
         email: user.email,
         keyId: userID,
         picture: user.picture,
       };
-      console.log("yuhu");
+
       // store user data to redux
       dispatch(userData(userObject));
-
-      const database = getDatabase(app);
+      // store user data to firebase
       set(ref(database, "users/" + userID), userObject);
+      console.log("Stored To firebse");
     }
     // console.log(user.email);
-  }, [user]);
+  }, [dispatch, user]);
 
   useEffect(() => {
     /* global google */
